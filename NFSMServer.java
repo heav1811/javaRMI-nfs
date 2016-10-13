@@ -1,10 +1,5 @@
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.io.*;
+import java.nio.*;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -13,9 +8,11 @@ import java.util.LinkedList;
 
 
 @SuppressWarnings("unused")
-public class NFSServer implements NFS {
+public class NFSMServer implements NFS {
 
-    public NFSServer() {}
+    public NFSMServer() {
+    	}
+    
 
  
     public static void main(String args[]) {
@@ -34,35 +31,46 @@ public class NFSServer implements NFS {
             System.err.println("Server exception: " + e.toString());
             e.printStackTrace();
     }
+}
 
-    }
+
+
 	@Override
 	public String create() throws RemoteException {
-		System.out.println("this method was called!");
-		return "OMFG";
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+
 
 	@Override
 	public boolean del(String path, String blob) throws RemoteException {
-	
+		// TODO Auto-generated method stub
 		return false;
 	}
+
+
 
 	@Override
 	public File get(String path) throws RemoteException {
-		
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
+
+
 	@Override
 	public boolean init(String local_path, String remote_path) throws RemoteException {
-		
+		// TODO Auto-generated method stub
 		return false;
 	}
 
+
+
 	@Override
 	public boolean close(String path) throws RemoteException {
-		
+		// TODO Auto-generated method stub
 		return false;
 	}
+    
 }
