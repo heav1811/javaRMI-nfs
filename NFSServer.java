@@ -41,4 +41,34 @@ public class NFSServer implements NFS {
             e.printStackTrace();
         }
     }
+
+	@Override
+	public boolean create(String path, String blob) throws RemoteException {
+		
+		return false;
+	}
+
+	@Override
+	public boolean del(String path, String blob) throws RemoteException {
+	
+		return false;
+	}
+
+	@Override
+	public File get(String path) throws RemoteException {
+		
+		return null;
+	}
+	
+	@Override
+	public boolean init(String local_path, String remote_path) throws RemoteException {
+		
+		return false;
+	}
+
+	@Override
+	public boolean close(String path) throws RemoteException {
+		
+		return false;
+	}
 }

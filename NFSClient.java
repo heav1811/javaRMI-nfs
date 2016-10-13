@@ -21,8 +21,8 @@ public class NFSClient {
         try {
             Registry registry = LocateRegistry.getRegistry(host);
             NFS stub = (NFS) registry.lookup("NFS");
-            String response = stub.sayHello();
-            System.out.println("response: " + response);
+
+        
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
